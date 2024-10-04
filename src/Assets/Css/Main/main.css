@@ -1,0 +1,10 @@
+.main{
+    margin: 10%;
+    border: none;
+    display: flex;
+    background-color:#f1f1f1;
+    height: 100%;
+    width: 80%;
+    min-height: 100vh;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}

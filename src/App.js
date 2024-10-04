@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+// src > App.js
 
-function App() {
+import React, { Suspense } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import "./App.css";
+import AppRoutes from "./Routes/AppRoutes/AppRoutes";
+import Header from "./Components/Header/Header";
+import Footer from "./Components/Footer/Footer";
+import { RiseLoader } from "react-spinners";
+
+const App = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="App">
+        <Router>
+          <Header />
+          <Suspense fallback={<div className="App-loading">
+            <RiseLoader color="#2c3e50" size={15} margin={2} />
+          </div>}>
+            <AppRoutes />
+          </Suspense>
+          <Footer />
+        </Router>
+      </div>
+    </>
+
   );
 }
 

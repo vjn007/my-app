@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import "../../Assets/Css/SignIn/signIn.css";
+import { useNavigation } from "../../Utils/Functions/Navigation/Navigation";
+
 
 const SignIn = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [errors, setErrors] = useState({});
+    let navigateTo = useNavigation();
 
     const validateForm = () => {
         const newErrors = {};
@@ -57,6 +60,8 @@ const SignIn = () => {
 
                             <button type="submit" className="submit-btn">Sign In</button>
                         </form>
+                        <div className="mt-4"><span className="cursor" onClick={(() => navigateTo("/forgot-password"))}>Forgot-password?</span></div>
+                        <div className="mt-4">Click Here To <span className="cursor" onClick={(() => navigateTo("/sign-up"))}>Sign Up</span></div>
                     </div>
                 </div>
             </div>

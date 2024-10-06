@@ -1,3 +1,77 @@
-.landing{
-    
+.landing-page {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.landing-hero {
+    height: 80vh;
+    background: url('../../Images/landing-bg.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.landing-hero h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.landing-hero p {
+    font-size: 22px;
+}
+
+.cta-btn {
+    background-color: #ff4c3b;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.cta-btn:hover {
+    background-color: #e0432e;
+}
+
+.new-arrivals {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.new-arrivals h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.product-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 22%;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product-item h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.product-item p {
+    font-size: 18px;
+    color: #ff4c3b;
 }
